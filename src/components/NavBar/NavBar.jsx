@@ -5,8 +5,8 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
-import { useGetCategories } from "../../hooks/useProducs";
-// import { useGetCategories } from "./hooks/useProducts";
+
+import { useGetCategories } from "../../hooks/useProducts";
 
 const NavBar = () => {
   const { categories } = useGetCategories();
@@ -14,7 +14,7 @@ const NavBar = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Link to="/">Tienda Nicolas</Link>
+        <Link to="/">Eshop-test</Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -31,6 +31,8 @@ const NavBar = () => {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
+
+        {/* <Link to="/create-product">Crear producto nuevo</Link> */}
 
         <CartWidget />
       </Container>
